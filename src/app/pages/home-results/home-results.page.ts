@@ -9,6 +9,8 @@ import {
 
 // Modals
 import { SearchFilterPage } from '../../pages/modal/search-filter/search-filter.page';
+import { ModalOSPage } from '../../pages/modal/modal-os/modal-os.page';
+import { ModalServicoPage } from '../../pages/modal/modal-servico/modal-servico.page';
 import { ImagePage } from './../modal/image/image.page';
 // Call notifications test by Popover and Custom Component.
 import { NotificationsComponent } from './../../components/notifications/notifications.component';
@@ -84,6 +86,20 @@ export class HomeResultsPage {
   async searchFilter () {
     const modal = await this.modalCtrl.create({
       component: SearchFilterPage
+    });
+    return await modal.present();
+  }
+
+  async modalOS () {
+    const modal = await this.modalCtrl.create({
+      component: ModalOSPage
+    });
+    return await modal.present();
+  }
+
+  async modalServico () {
+    const modal = await this.modalCtrl.create({
+      component: ModalServicoPage
     });
     return await modal.present();
   }

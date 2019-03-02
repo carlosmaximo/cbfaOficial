@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 // Modal Pages
 import { ImagePageModule } from './pages/modal/image/image.module';
 import { SearchFilterPageModule } from './pages/modal/search-filter/search-filter.module';
+import { ModalOSPageModule } from './pages/modal/modal-os/modal-os.module';
+import { ModalServicoPageModule } from './pages/modal/modal-servico/modal-servico.module';
 
 // Components
 import { NotificationsComponent } from './components/notifications/notifications.component';
@@ -28,7 +30,8 @@ import { NotificationsComponent } from './components/notifications/notifications
     AppRoutingModule,
     HttpClientModule,
     ImagePageModule,
-    SearchFilterPageModule
+    SearchFilterPageModule,
+    ModalOSPageModule
   ],
   entryComponents: [NotificationsComponent],
   providers: [

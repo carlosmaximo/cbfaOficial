@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button color="primary" (click)="closeModal()">
+            <ion-icon name="close" color="light"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+    	Inspe&ccedil;&atilde;o de recebimento
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item margin-bottom>
+    <ion-label color="primary" stacked>
+    	<ion-text color="dark" class="fw500">Data</ion-text>
+    </ion-label>
+    <ion-datetime type="date" value="{{myDate | date:'dd/MM/yyyy'}}"></ion-datetime>
+  </ion-item>
+
+  <ion-item margin-bottom>
+    <ion-label color="primary" stacked>
+    	<ion-text color="dark" class="fw500">OS</ion-text>
+    </ion-label>
+    <ion-input type="text" placeholder="" value="CBFA001"></ion-input>
+  </ion-item>
+
+  <ion-item margin-bottom>
+    <ion-label color="primary" stacked>
+    	<ion-text color="dark" class="fw500">Usu&aacute;rio</ion-text>
+    </ion-label>
+    <ion-input type="text" placeholder="usuario" value="JOSE DA SILVA"></ion-input>
+  </ion-item>
+	
+	<ion-button expand="full" color="primary"  (click)="closeModal()">Pr&oacute;ximo</ion-button>
+</ion-content>
