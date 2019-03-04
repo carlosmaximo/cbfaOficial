@@ -15,7 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ImagePageModule } from './pages/modal/image/image.module';
 import { SearchFilterPageModule } from './pages/modal/search-filter/search-filter.module';
 import { ModalOSPageModule } from './pages/modal/modal-os/modal-os.module';
+import { ModalInspecaoPageModule } from './pages/modal/modal-inspecao/modal-inspecao.module';
 import { ModalServicoPageModule } from './pages/modal/modal-servico/modal-servico.module';
+import { ModalReperfilamentoPageModule } from './pages/modal/modal-reperfilamento/modal-reperfilamento.module';
 
 // Components
 import { NotificationsComponent } from './components/notifications/notifications.component';
@@ -31,7 +33,9 @@ import { NotificationsComponent } from './components/notifications/notifications
     HttpClientModule,
     ImagePageModule,
     SearchFilterPageModule,
-    ModalOSPageModule
+    ModalOSPageModule,
+    ModalInspecaoPageModule,
+    ModalReperfilamentoPageModule
   ],
   entryComponents: [NotificationsComponent],
   providers: [

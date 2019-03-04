@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button color="primary" (click)="closeModal()">
+            <ion-icon name="close" color="light"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Reperfilamento
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card class="bg-white">
+    <ion-list no-padding no-margin>
+    <ion-item color="primary" class="text-8">
+      <!-- <ion-icon name="reorder" color="light"></ion-icon> -->
+      <ion-label>OS</ion-label>
+      <ion-label>Modelo Eixo</ion-label>
+      <ion-label>Tamanho Roda</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list no-padding no-margin>
+    <ion-item color="default" class="text-8">
+      <!-- <ion-icon name="reorder" color="light"></ion-icon> -->
+      <ion-label>CBFA001</ion-label>
+      <ion-label>6 1/2x12</ion-label>
+      <ion-label>36"</ion-label>
+    </ion-item>
+  </ion-list>
+  </ion-card>
+  
+	<ion-button expand="full" color="primary" (click)="start()">Iniciar</ion-button>
+  <ion-button expand="full" color="warning" (click)="pause()">Pausar</ion-button>
+  <ion-button expand="full" color="success" (click)="stop()">Terminar</ion-button>
+
+  <h1>
+    {{hora | number:'2.0'}}:{{minuto | number:'2.0'}}:{{segundo | number:'2.0'}}
+  </h1>    
+</ion-content>

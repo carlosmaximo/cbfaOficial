@@ -6,7 +6,7 @@
         </ion-button>
     </ion-buttons>
     <ion-title>
-    	Inspe&ccedil;&atilde;o de recebimento
+    	Confirmar dados da OS
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -17,7 +17,7 @@
     <ion-label color="primary" stacked>
     	<ion-text color="dark" class="fw500">Data</ion-text>
     </ion-label>
-    <ion-datetime type="date" value="{{myDate | date:'dd/MM/yyyy'}}"></ion-datetime>
+    <ion-datetime type="date"></ion-datetime>
   </ion-item>
 
   <ion-item margin-bottom>
@@ -34,5 +34,24 @@
     <ion-input type="text" placeholder="usuario" value="JOSE DA SILVA"></ion-input>
   </ion-item>
 	
-	<ion-button expand="full" color="primary"  (click)="closeModal()">Pr&oacute;ximo</ion-button>
+	<ion-button expand="full" color="primary"  (click)="modalInspecao()">Adicionar Item</ion-button>
+
+  <!-- Lista de itens da os -->
+  <ion-card class="bg-white">
+    <ion-list no-padding no-margin>
+    <ion-list-header color="dark">
+      <ion-label>Itens cadastrados</ion-label>
+    </ion-list-header>
+
+    <ion-item color="primary" class="text-8" (click)="modalReperfilamento()">
+      <ion-icon name="reorder" color="light"></ion-icon>
+      <ion-label>Item um</ion-label>
+    </ion-item>
+
+    <ion-item color="light" class="text-10" (click)="modalReperfilamento()">
+      <ion-icon name="reorder" color="primary"></ion-icon>
+      <ion-label>Item dois</ion-label>
+    </ion-item>
+  </ion-list>
+  </ion-card>
 </ion-content>

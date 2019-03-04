@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
+import { ModalInspecaoPage } from '../modal-inspecao/modal-inspecao.page';
+import { ModalReperfilamentoPage } from '../modal-reperfilamento/modal-reperfilamento.page';
 
 @Component({
   selector: 'app-modal-os',
@@ -15,7 +17,9 @@ export class ModalOSPage implements OnInit {
 
   myDate: String = new Date().toString();
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(
+    private modalCtrl: ModalController,
+    public navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -24,4 +28,17 @@ export class ModalOSPage implements OnInit {
     this.modalCtrl.dismiss();
   }
 
+  async modalInspecao () {
+    const modal = await this.modalCtrl.create({
+      component: ModalInspecaoPage
+    });
+    return await modal.present();
+  }
+
+  async modalReperfilamento () {
+    const modal = await this.modalCtrl.create({
+      component: ModalReperfilamentoPage
+    });
+    return await modal.present();
+  }
 }

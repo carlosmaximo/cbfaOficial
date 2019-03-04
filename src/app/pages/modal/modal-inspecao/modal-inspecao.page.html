@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button color="primary" (click)="closeModal()">
+            <ion-icon name="close" color="light"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Inspe&ccedil;&atilde;o / Recebimento
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+      <ion-icon name="settings" slot="start" color="primary"></ion-icon>
+      <ion-label color="primary">Tam. Roda</ion-label>
+      <ion-select [(ngModel)]="tam">
+        <ion-select-option *ngFor="let tamanho of tamanhos" [value]="tam">{{tamanho}}</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-icon name="settings" slot="start" color="primary"></ion-icon>
+      <ion-label color="primary">Modelo Roda</ion-label>
+      <ion-select [(ngModel)]="mod">
+        <ion-select-option *ngFor="let modelo of modelos" [value]="tam">{{modelo}}</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-icon name="settings" slot="start" color="primary"></ion-icon>
+      <ion-label color="primary">Modelo Eixo</ion-label>
+      <ion-select [(ngModel)]="modEixo">
+        <ion-select-option *ngFor="let eixo of eixos" [value]="tam">{{eixo}}</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-list-header>
+      <ion-text color="dark">
+        <h5>Avalia&ccedil;&atilde;o</h5>
+      </ion-text>
+    </ion-list-header>
+
+    <ion-list>
+    <ion-list-header>
+      <ion-text color="dark">
+        <h5>Roda</h5>
+      </ion-text>
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="clipboard" slot="start" color="primary"></ion-icon>
+      <ion-label class="label" id="labelRodaAprovado" color="primary">
+      	<ng-template [ngIf]="rodaAprovacao"><div>Aprovado</div></ng-template>
+  		  <ng-template [ngIf]="!rodaAprovacao"><div>Reprovado</div></ng-template>
+      </ion-label>
+      <ion-toggle [(ngModel)]="rodaAprovacao"></ion-toggle>
+    </ion-item>
+
+    <ion-list-header>
+      <ion-text color="dark">
+        <h5>Eixo</h5>
+      </ion-text>
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="clipboard" slot="start" color="primary"></ion-icon>
+      <ion-label class="label" id="labelEixoAprovado" color="primary">
+      	<ng-template [ngIf]="eixoAprovacao"><div>Aprovado</div></ng-template>
+      	<ng-template [ngIf]="!eixoAprovacao"><div>Reprovado</div></ng-template>
+      </ion-label>
+      <ion-toggle [(ngModel)]="eixoAprovacao"></ion-toggle>
+    </ion-item>
+  </ion-list>
+	
+	<ion-button expand="full" color="primary"  (click)="closeModal()">Salvar</ion-button>
+</ion-content>
